@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>book</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1073820_4m4ovg6w9zp.css">
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but book doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong></strong>
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <script>
+        (function () {
+           function getSize() {
+               let winW = document.documentElement.clientWidth;
+               if (winW>750){
+                   winW=750
+               }
+               document.documentElement.style.fontSize = winW/750*100 +"px";
+           }
+           getSize();
+           window.addEventListener('resize',getSize)
+        })()
+    </script>
   </body>
 </html>
